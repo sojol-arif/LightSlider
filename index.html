@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/lightslider.css" />    
+    <style>
+        
+        .lSSlideOuter {
+            width:473px;
+            margin:30px auto;
+            height: 343px;
+        }
+        #imageGallery{
+            width: 473px;
+            position: relative;
+        }
+        ul{
+            width:500px;
+            margin:0 auto;
+            margin-left:400px;
+        }
+        .lSSlideOuter.vertical .lSAction > .lSPrev {
+            background-position: 0 -31px;
+            bottom: auto;
+            top: 10px;
+            content:"f106";
+        }
+        .lSSlideOuter.vertical .lSAction > .lSNext {
+            background-position: 31px -31px;
+            top: auto;
+            content: "f107";
+        }
+        .lSSlideOuter.vertical .lSAction .lSPrev, .lSSlideOuter.vertical .lSAction .lSNext{
+            position: absolute
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <ul id="imageGallery">
+        <li class="active" data-thumb="assets/img/cS-1.jpg" data-src="assets/img/cS-1.jpg">
+            <img class="active" src="assets/img/cS-1.jpg" />
+        </li>
+        <li data-thumb="assets/img/cS-2.jpg" data-src="assets/img/cS-2.jpg">
+            <img src="assets/img/cS-2.jpg" />
+        </li>
+        <li data-thumb="assets/img/cS-3.jpg" data-src="assets/img/cS-3.jpg">
+            <img src="assets/img/cS-3.jpg" />
+        </li>
+        <li data-thumb="assets/img/cS-4.jpg" data-src="assets/img/cS-4.jpg">
+            <img src="assets/img/cS-4.jpg" >
+        </li>
+        <li data-thumb="assets/img/cS-5.jpg" data-src="assets/img/cS-5.jpg">
+            <img src="assets/img/cS-5.jpg" />
+        </li>
+        <li data-thumb="assets/img/cS-6.jpg" data-src="assets/img/cS-6.jpg">
+            <img src="assets/img/cS-6.jpg" >
+        </li>
+    </ul>
+
+
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/lightslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#imageGallery').lightSlider({
+                  gallery:true,
+      item:1,
+      vertical:true,
+      verticalHeight:295,
+      vThumbWidth:50,
+      thumbItem:6,
+      thumbMargin:4,
+      slideMargin:0
+            });  
+        });
+    </script>
+</body>
+</html>
